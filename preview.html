@@ -11,11 +11,10 @@
 
     <h2 class="mb-3">Student Grading System</h2>
   <!-- ******ENTER STUDENT DETAILS HERE -->
-
-  <div>
-    <label for="student-name" class="form-label">Student name</label>
-    <input type="text" class="form-control" id="student-name" placeholder="Enter name" required>
-    </div>
+      <div>
+      <label for="student-name" class="form-label">Student name</label>
+      <input type="text" class="form-control" id="student-name" placeholder="Enter name" required>
+      </div>
 
       <div class="mb-3">
     <label for="class-select" class="form-label">Select Faslu</label>
@@ -39,8 +38,6 @@
             <option value="3rd Term">3rd Term</option>
         </select>
     </div>
-
-
 
   <!-- ******ENTER STUDENT DETAILS HERE -->
     <button id="add-subject" class="btn btn-primary mb-3">Add Subject</button>
@@ -98,10 +95,10 @@
 
                         <!-- Text Section (Right) -->
                         <div class="col-md-9 text-end">
-                            <h4 class= " school-name fs-6">مدرسة ابن كثير لتحفيظ القرآن و الدراسة الإسلامية</h4>
-                            <h5 id="company-name" class="font-weight-bold text-small">Ibn Katheer school of Memorization of Qur'an and Islamic studies</h5>
+                            <h4 class= " school-name">مدرسة ابن كثير لتحفيظ القرآن و الدراسة الإسلامية</h4>
+                            <h5 id="company-name" class="font-weight-bold">Ibn Katheer school of Memorization of Qur'an and Islamic studies</h5>
                             <p id="head-office" class="fst-italic">Head Office: Ogaga Str., Aka Layout, Off Refinery road, Warri, Delta State</p>
-                            <p class="mb-0 fs-6">Email: ibnkatheertahfeedhschool@gmail.com | Phone: +234 706 314 2465, +234 803 303 4627</p>
+                            <p class="mb-0">Email: ibnkatheertahfeedhschool@gmail.com | Phone: +234 706 314 2465, +234 803 303 4627</p>
                         </div>
                         <h2 class="my-2 text-center text-danger">Student Report</h2>
                     </div>
@@ -128,10 +125,10 @@
                     <div>
                       <div>
                         <!-- GRADE SYSTEM TABLE START-->
-                        <table class=" w-50 table table-striped .tight-table table-bordered m-5 caption-top " id="gradingSystem">
+                        <table class=" w-50 table table-striped table-bordered m-5 caption-top ">
                             <caption>Grading system</caption>
                             <thead class="grade-system">
-                              <tr class="p-0">
+                              <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">score</th>
                                 <th scope="col">grade</th>
@@ -304,7 +301,7 @@
             // ----add student info-----
             document.getElementById("student-name").addEventListener("input", function() {
             let studentName = this.value;
-            document.getElementById("displayName").innerHTML = `<p class = "text-primary><strong class="font-weight-bold fs-1 fw-bold">NAME:</strong> ${studentName || "No term entered"}</p>`;
+            document.getElementById("displayName").innerHTML = `<p><strong class="font-weight-bold">NAME:</strong> ${studentName || "No term entered"}</p>`;
                 console.log(studentName)
         });
 

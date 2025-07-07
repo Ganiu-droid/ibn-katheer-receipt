@@ -1,1 +1,32 @@
+.grade-system{
+  font-size: 8px;
+}
 
+@media (max-width: 768px) {
+  .logo img {
+      /* display: block; */
+      margin: 0 auto;
+  }
+
+  .text-end {
+      text-align: center !important;
+  }
+}
+
+/* #modal-body{
+  width: 210mm;
+    height: 297mm;
+} */
+
+
+.tight-table td, .tight-table th{
+  padding: 4px !important;
+}
+
+#gradingSystem{
+  margin: 3px;
+}
+
+#gradingSystem td, #gradingSystem th{
+    padding: 2px !important;
+}
