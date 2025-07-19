@@ -39,6 +39,20 @@
             <option value="3rd Term">3rd Term</option>
         </select>
     </div>
+      <div class="mb-3">
+        <label for="comment-select" class="form-label">Comment on student's peformance</label>
+        <select class="form-control" id="comment-select" required>
+             <option value="" disabled selected>Select a comment</option>
+            <option value="Excellent performance. Keep it up!">Excellent performance. Keep it up!</option>
+            <option value="Very good effort. Aim for even higher.">Very good effort. Aim for even higher.</option>
+            <option value="Good performance. There is room for improvement.">Good performance. There is room for improvement.</option>
+            <option value="Average performance. Needs more dedication.">Average performance. Needs more dedication.</option>
+            <option value="Below average. Encourage more study and participation.">Below average. Encourage more study and participation.</option>
+            <option value="Poor performance. Immediate attention is required.">Poor performance. Immediate attention is required.</option>
+            <option value="Shows great potential. Continue to work hard.">Shows great potential. Continue to work hard.</option>
+            <option value="Struggles in class. Needs support and follow-up.">Struggles in class. Needs support and follow-up.</option>
+        </select>
+    </div>
 
 
 
@@ -106,29 +120,31 @@
                         <h2 class="my-2 text-center text-danger">Student Report</h2>
                     </div>
                 </div>
-                   <!--STUDENT DETALS-->
+                   <!--STUDENT DETAILS-->
                   <!-- <div>student info goes here</div> -->
-                  <div id="displayName"></div>
+                  <div class="display-Name"><h3 class="text-success" id="displayName">NAME: </h3></div>
                     <div id="displayTerm"></div>
                     <div id="displayClass"></div>
+
                   <!--STUDENT DETAILS-->
                     <table class="table table-bordered border-primary">
-                        <thead>
-                            <tr>
+                        <thead class="text-primary">
+                            <tr class="h4 ">
                                 <th>Subject</th>
                                 <th>Score</th>
                                 <th>Grade</th>
                                 <th>Remark</th>
                             </tr>
                         </thead>
-                        <tbody id="preview-results-body"></tbody>
+                        <tbody class="h6" id="preview-results-body"></tbody>
                     </table>
                     <p><strong>Total Score:</strong> <span id="preview-total-score">0</span></p>
                     <p><strong>Average Score:</strong> <span id="preview-average-score">0</span></p>
+                    <div id="displayComment"></div>
                     <div>
                       <div>
                         <!-- GRADE SYSTEM TABLE START-->
-                        <table class=" w-50 table table-striped .tight-table table-bordered m-5 caption-top " id="gradingSystem">
+                        <table class=" w-50 table table-striped .tight-table table-bordered m-5 caption-top .table-condensed" id="gradingSystem">
                             <caption>Grading system</caption>
                             <thead class="grade-system">
                               <tr class="p-0">
@@ -304,7 +320,7 @@
             // ----add student info-----
             document.getElementById("student-name").addEventListener("input", function() {
             let studentName = this.value;
-            document.getElementById("displayName").innerHTML = `<p class = "text-primary><strong class="font-weight-bold fs-1 fw-bold">NAME:</strong> ${studentName || "No term entered"}</p>`;
+            document.getElementById("displayName").innerHTML = `<p class = "text-primary><strong class="font-weight-bold fs-1 fw-bold"></strong> ${studentName || "No term entered"}</p>`;
                 console.log(studentName)
         });
 
@@ -315,7 +331,11 @@
         });
             document.getElementById("class-select").addEventListener("change", function() {
             let selectedClass = this.value;
-            document.getElementById("displayClass").innerHTML = `<strong>FASLU:</strong> ${selectedClass || "No Class selected"}`;
+            document.getElementById("displayClass").innerHTML = `<strong>FASLU:</strong> ${selectedClass || ""}`;
+        });
+            document.getElementById("comment-select").addEventListener("change", function() {
+            let selectedComment = this.value;
+            document.getElementById("displayComment").innerHTML = `<strong>TEACHER'S COMMENT:</strong> ${selectedComment || ""}`;
         });
 
         //-----add student info ends here----
